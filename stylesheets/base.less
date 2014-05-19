@@ -1,0 +1,348 @@
+@import "syntax-variables";
+
+.editor-colors {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @grey-light-x3;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .cursor-line {
+    background-color: @grey-light-x3;
+  }
+
+  .brace {
+    color: @teal-dark-x2;
+  }
+}
+
+.editor .search-results .marker .region {
+  background-color: @green-light-x3;
+  border: 0px solid @syntax-result-marker-color;
+}
+
+.editor .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+.comment {
+  color: @grey-medium-x3;
+}
+
+.entity {
+  &.name.type {
+    color: @red-medium-x1;
+    // text-decoration: underline;
+  }
+
+  &.other.inherited-class {
+    color: @orange-dark-x3;
+  }
+}
+
+.keyword {
+  color: @teal-medium-x1;
+
+  &.control {
+    color: @teal-light-x1;
+  }
+
+  &.operator {
+    color: @syntax-text-color;
+  }
+
+  &.other.special-method {
+    color: @red-dark-x3;
+  }
+
+  &.other.unit {
+    color: @grey-medium-x1;
+  }
+}
+
+.storage {
+  color: @teal-dark-x1;
+}
+
+.constant {
+  color: @teal-dark-x3;
+
+  &.character.escape {
+    color: @orange-medium-x1;
+  }
+
+  &.numeric {
+    color: @blue-dark-x3;
+  }
+
+  &.other.color {
+    color: @orange-medium-x1;
+  }
+
+  &.other.symbol {
+    color: @blue-dark-x3;
+  }
+}
+
+.variable {
+  color: @blue-dark-x2;
+
+  &.interpolation {
+    color: @red-dark-x3;
+  }
+
+  &.parameter.function {
+    color: @syntax-text-color;
+  }
+
+  .punctuation.definition.variable {
+    color: @blue-dark-x2;
+  }
+}
+
+.invalid.illegal {
+  background-color: @red-medium-x1;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @blue-medium-x3;
+
+
+  &.regexp {
+    color: @blue-medium-x3;
+
+    .source.ruby.embedded {
+      color: @orange-medium-x1;
+    }
+  }
+
+  &.other.link {
+    color: @orange-medium-x1;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @grey-medium-x3;
+    }
+
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @teal-medium-x3;
+    }
+
+    &.entity {
+      // color: @green-medium-x2;
+    }
+
+    &.heading,
+    &.identity {
+      color: @orange-medium-x1;
+    }
+
+    &.bold {
+      color: @orange-medium-x1;
+      font-style: bold;
+    }
+
+    &.italic {
+      color: @orange-medium-x1;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: @grey-medium-x2;
+  }
+
+}
+
+.support {
+  &.class {
+    color: @red-medium-x1;
+  }
+
+  &.function  {
+    color: @red-dark-x3;
+
+    &.any-method {
+      color: @red-dark-x3;
+    }
+  }
+}
+
+.entity {
+  &.name.function {
+    color: @red-dark-x3;
+  }
+
+  &.name.class, &.name.type.class {
+    color: @red-medium-x1;
+  }
+
+  &.name.section {
+    color: @orange-medium-x1;
+  }
+
+  &.name.tag {
+    color: @red-medium-x1;
+    // text-decoration: underline;
+  }
+
+  &.other.attribute-name {
+    color: @red-medium-x1;
+
+    &.id {
+      color: @red-dark-x3;
+    }
+  }
+}
+
+.meta {
+  &.class {
+    color: @red-medium-x1;
+  }
+
+  &.link {
+    color: @orange-medium-x1;
+  }
+
+  &.require {
+    color: @orange-medium-x1;
+  }
+
+  &.selector {
+    color: @red-dark-x3;
+  }
+
+  &.separator {
+    background-color: @orange-medium-x1;
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @orange-medium-x1;
+    font-style: bold;
+  }
+
+  &.changed {
+    color: @orange-medium-x1;
+  }
+
+  &.deleted {
+    color: @orange-medium-x1;
+  }
+
+  &.italic {
+    color: @grey-medium-x1;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @orange-medium-x1;
+  }
+
+  &.inserted {
+    color: @orange-medium-x1;
+  }
+
+  &.list {
+    color: @orange-medium-x1;
+  }
+
+  &.quote {
+    color: @orange-medium-x1;
+  }
+
+  &.raw.inline {
+    color: @orange-medium-x1;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @red-medium-x1;
+  }
+}
+
+.editor.mini .scroll-view {
+  padding-left: 1px;
+}
+
+.url {
+  color: @green-medium-x3;
+}
+
+
+.id {
+  color: @blue-dark-x2;
+}
+
+
+// Plugins /////////////////////////////////////////////////////////////////////
+
+.vim-mode.command-mode:not(.mini).editor.is-focused .cursor,
+.vim-mode.command-mode:not(.mini).editor.is-focused .cursor.blink-off {
+  background-color: @grey-dark-x0;
+  color: @grey-dark-x0;
+  opacity: 1;
+}

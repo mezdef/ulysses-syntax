@@ -1,0 +1,11 @@
+{
+  "name": "ulysses-syntax",
+  "theme": "syntax",
+  "version": "0.0.1",
+  "description": "A light Atom syntax theme for the discerning individual.",
+  "repository": "https://github.com/atom/ulysses-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
