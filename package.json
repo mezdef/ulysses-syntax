@@ -1,7 +1,7 @@
 {
   "name": "ulysses-syntax",
   "theme": "syntax",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A light Atom syntax theme for the discerning individual.",
   "repository": "https://github.com/mezdef/ulysses-syntax",
   "license": "MIT",
