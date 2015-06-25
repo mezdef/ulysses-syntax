@@ -12,12 +12,23 @@
   }
 }
 
+
 // SASS ////////////////////////////////////////////////////////////////////////
 .sass {
   .at-rule {
     color: @teal-medium-x1;
     .keyword {
       color: @teal-light-x1;
+    }
+  }
+}
+
+// LESS ////////////////////////////////////////////////////////////////////////
+
+.less {
+  .mixin {
+    &.entity.other.attribute-name {
+      color: @teal-medium-x1;
     }
   }
 }
